@@ -10,6 +10,21 @@ Before initiating the deployment process, some software must be installed. Detai
 - [Snap Installation Guide on CentOS](https://snapcraft.io/docs/installing-snap-on-centos)
 - [Certbot Installation Guide on CentOS](https://certbot.eff.org/instructions?ws=other&os=centosrhel7)
 
+## Repositories Required for Deployment
+
+The deployment utilizes several repositories, each offering different components for the overall system. You'll need to use the following repositories:
+
+1. [Starter Kit Storage and Interfaces](https://github.com/GenomicDataInfrastructure/starter-kit-storage-and-interfaces.git) - This repository provides the required storage components and interfaces for the deployment.
+
+2. [Starter Kit HTSget](https://github.com/GenomicDataInfrastructure/starter-kit-htsget.git) - This repository includes the component for data retrieval.
+
+3. [Starter Kit REMS](https://github.com/GenomicDataInfrastructure/starter-kit-rems.git) - This repository manages access rights to resources for the starter kit.
+
+4. [Starter Kit Containerized Computation](https://github.com/GenomicDataInfrastructure/starter-kit-containerized-computation.git) - This repository provides the components for containerized computation, essential for processing genomic data.
+
+5. [Starter Kit Beacon2 RI API](https://github.com/GenomicDataInfrastructure/starter-kit-beacon2-ri-api.git) - This repository contains the Beacon v2 for the starter kit.
+
+
 ## Deployment Procedure
 Follow the steps provided below to successfully deploy the GDI Starter Kit:
 

@@ -28,7 +28,32 @@ The deployment utilizes several repositories, each offering different components
 ## Deployment Procedure
 Follow the steps provided below to successfully deploy the GDI Starter Kit:
 
+### Certificate Generation for Services
+
+All user-facing services operate with TLS encryption for secure communication. We utilize Certbot to create these certificates. These certificates are stored in a Docker volume, which is mounted across all the containers. 
+
+To generate the certificates, run the following command:
+
+sudo certbot certonly --standalone --noninteractive --agree-tos --preferred-challenges http --email jorge.miguel.ferreira.silva@ua.pt -d htsget.gdi.biodata.pt -d login.gdi.biodata.pt -d download.gdi.biodata.pt -d beacon.gdi.biodata.pt -d inbox.gdi.biodata.pt -d rems.gdi.biodata.pt --expand
+
+```bash
+
+sudo certbot certonly --standalone --noninteractive --agree-tos --preferred-challenges http --email [user]@[domain] \
+-d htsget.gdi.biodata.pt \
+-d login.gdi.biodata.pt \
+-d download.gdi.biodata.pt \
+-d beacon.gdi.biodata.pt \
+-d inbox.gdi.biodata.pt \
+-d rems.gdi.biodata.pt \
+--expand
+```
+**Important**: Ensure that port 80 is open on your machine when running the command above.
+
+
 (Add detailed deployment instructions here)
+
+
+### Note
 
 Bear in mind, the deployment process can vary based on system specifications and configurations. For any issues or further assistance, please refer to our troubleshooting section.
 
